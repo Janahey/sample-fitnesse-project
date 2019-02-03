@@ -1,0 +1,11 @@
+---
+Test
+---
+
+|script|browser test                                    |
+|open  |http://www.ns.nl                                |
+|enter |Utrecht Centraal|as|css=input[name=FROM]        |
+|enter |Culemborg|as|css=input[name=TO]                 |
+|click| Culemborg                                       |
+|click| Plannen                                           |
+|click| Plannen                                           |
