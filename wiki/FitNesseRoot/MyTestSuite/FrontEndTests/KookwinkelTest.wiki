@@ -1,32 +1,30 @@
 ---
-Test
+Test Kookwinkel.nl
+Twee kookboeken bestellen. Eén via het menu en één via de zoekfunctie. Bedragen in het besteloverzicht controleren.
 ---
----
-Test Zooplus.nl
-Hondenbrokken op zoeken, in het winkelwagentje zetten en controleren of het totaal bedrag 44.99 euro is.
----
-|script |browser test                                                                    |
-|open   |http://www.kookwinkel.nl                                                        |
-| set browser size to maximum |
-|click  |Cookies toestaan                                                                          |
-|hover over| Assortiment                                                                             |
-|click| Kookboeken                                                                          |
-|scroll to| Kookboeken op geografie                                                         |
-|click|Midden-Oosterse kookboeken|
-|click |Persiana |
-|scroll to | Recepten uit het Midden-Oosten & verder |
-|click | In winkelwagen |
-|enter| Ottolenghi |as|css=input[id="search"] |
-|scroll to | Sweet|
-|click |Plenty |
-|scroll to | Schrijf de eerste review over dit product |
-|click | In winkelwagen |
-|click | css= .subtotal|
-|click| Verder met bestellen |
-|wait | 6 |seconds|
-|show   | take screenshot                   | Foto_Besteloverzicht                       |
-|check  |value of                           |css=.price                           |€ 32,00|
-|check  |value of                           | css=.price                            |€ 25,95|
+|script     | browser test                                                                      |
+|open       | http://www.kookwinkel.nl                                                          |
+|set browser size to maximum                                                                    |
+|click      | Cookies toestaan                                                                  |
+|hover over | Assortiment                                                                       |
+|click      | Kookboeken                                                                        |
+|scroll to  | Kookboeken op geografie                                                           |
+|click      | Midden-Oosterse kookboeken                                                        |
+|click      | Persiana                                                                          |
+|scroll to  | Recepten uit het Midden-Oosten & verder                                           |
+|click      | In winkelwagen                                                                    |
+|enter      | Ottolenghi                              |as|css=input[id="search"]                |
+|scroll to  | Sweet                                                                             |
+|click      | Plenty                                                                            |
+|scroll to  | Schrijf de eerste review over dit product                                         |
+|click      | In winkelwagen                                                                    |
+|click      | css= .subtotal                                                                    |
+|click      | Verder met bestellen                                                              |
+|wait       | 6                     |seconds                                                    |
+|show       | take screenshot       | Foto_Besteloverzicht                                      |
+|check      | value of              |css=.aw-mobile-hide .aw-sidebar-product-card:nth-child(1) .price              |€ 25,95|
+|check      | value of              | css=.aw-mobile-hide .aw-sidebar-product-card:nth-child(2) .price             |€ 32,00|
+|check      | value of              | css= .grand .price                                                           |€ 57,95|
 
 
 
