@@ -2,14 +2,16 @@
 Test Zooplus.nl
 Hondenbrokken op zoeken, in het winkelwagentje zetten en controleren of het totaal bedrag 44.99 euro is.
 ---
-|script|browser test                                                                    |
-|open  |http://www.zooplus.nl                                                           |
-|enter |Hill's Science Plan hondenbrokken|as|css=input[id="search_query_field"]         |
-|press | Enter                                                                          |
-|wait |  5                  |seconds                                                    |
-|scroll to| Hill's Science Plan Adult 1-6 Advanced Fitness Medium met Lam & Rijst       |
-|click| Hill's Science Plan Adult 1-6 Advanced Fitness Medium met Lam & Rijst           |
-|scroll to | 12 kg                                                                      |
-|click| css=.icon-cart                                                                  |
-|click| Naar de winkelwagen                                                             |
-|check |value of                 |css=.total__price                            |€ 44,99 |
+|script |browser test                                                                    |
+|open   |http://www.zooplus.nl                                                           |
+|enter  |Hill's Science Plan hondenbrokken|as|css=input[id="search_query_field"]         |
+|press  | Enter                                                                          |
+|wait   |  5                  |seconds                                                   |
+|scroll to| Hill's Science Plan Adult 1-6 Advanced Fitness Medium met Lam & Rijst        |
+|click  | Hill's Science Plan Adult 1-6 Advanced Fitness Medium met Lam & Rijst          |
+|scroll to | 12 kg                                                                       |
+|click  | css=.icon-cart                                                                 |
+|click  | Naar de winkelwagen                                                            |
+|show   | take screenshot                   | Foto_winkelwagentje                        |
+|note   |Check of totale prijs overeen komt met de prijs van het geslecteerde product    |
+|check  |value of                           |css=.total__price                   |€ 42,74|
